@@ -46,6 +46,10 @@
   display: none;
 }
 
+.mobile-navbar {
+  display: none;
+}
+
 @media (max-width: 430px) {
   .navbar-links {
     display: none;
