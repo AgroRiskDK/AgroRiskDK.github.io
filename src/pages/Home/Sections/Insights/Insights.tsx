@@ -25,7 +25,12 @@ const InsightsSection = () => {
                 className={styles["insights-section-content-grid-item"]}
               >
                 <Link to={`/insights/${insight.order}`}>
-                  <img src={insight.img} />
+                  <img
+                    src={insight.img}
+                    className={
+                      styles["insights-section-content-grid-item-content-image"]
+                    }
+                  />
                 </Link>
                 <div
                   className={

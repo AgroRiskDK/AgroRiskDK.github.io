@@ -89,3 +89,55 @@
 .insights-section-see-insights-link {
   width: 13.0625rem;
 }
+
+@media (max-width: 430px) {
+  .insights-section {
+    overflow: hidden;
+    justify-content: inherit;
+    align-items: normal;
+    padding: 0;
+  }
+  .insights-section-content {
+    justify-content: inherit;
+    gap: 4rem;
+    padding: 5.625rem 0;
+  }
+  .insights-section-content-grid {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 1.75rem;
+    scrollbar-width: none;
+  }
+  .insights-section-content-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .insights-section-content-grid-item-content-image {
+    max-width: 328px;
+    height: 254px;
+  }
+  .insights-section-content-grid-item {
+    gap: 0;
+  }
+  .insights-section-content-grid-item-content-heading-item {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+  .insights-section-content-grid-item-content {
+    gap: 1.625rem;
+    max-width: 300px;
+  }
+  .insights-section-content-grid-item-content-caption {
+    font-size: 2.5rem;
+  }
+  .insights-section-content-heading {
+    max-width: 280px;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .insights-section-content-heading-preview {
+    font-size: 1.25rem;
+  }
+  .insights-section-content-heading-subtitle {
+    opacity: 0.5;
+  }
+}
