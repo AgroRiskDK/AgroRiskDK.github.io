@@ -6,10 +6,17 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 120rem) {
   .landing-layout {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .landing-layout {
+    align-items: normal;
   }
 }

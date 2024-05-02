@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 import styles from "./introduction.module.css";
 import ButtonLink from "@/components/Buttons/ButtonLink/ButtonLink";
+import Background from "@/assets/imgs/bg.jpeg";
 
 const IntroductionSection = () => {
   return (
@@ -11,7 +12,7 @@ const IntroductionSection = () => {
           <span
             className={styles["introduction-section-content-heading-title"]}
           >
-            Financial Climate Risk <br />
+            Financial Climate Risk <br className={styles["breaker"]} />
             for Agriculture
           </span>
           <span
@@ -26,6 +27,7 @@ const IntroductionSection = () => {
           className={styles["introduction-section-demonstration-link"]}
         />
       </div>
+      <img src={Background} alt="" className={styles["bg-image"]} />
     </div>
   );
 };

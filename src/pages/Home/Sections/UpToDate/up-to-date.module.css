@@ -50,3 +50,40 @@
   font-weight: 400;
   background-color: var(--primary-turquoise-color);
 }
+
+@media (max-width: 430px) {
+  .up-to-date-section {
+    padding-bottom: 0;
+  }
+  .up-to-date-section-wrapper {
+    padding: 4.75rem 2.875rem;
+    background-color: var(--primary-turquoise-color);
+    width: 100%;
+    border-radius: 0;
+    gap: 1.875rem;
+  }
+  .up-to-date-section-content {
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .up-to-date-section-content-title {
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    max-width: 274px;
+  }
+  .up-to-date-section-content-subtitle {
+    color: white;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+  .up-to-date-section-subscribe-btn {
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    border-radius: 2.0625rem;
+    color: var(--primary-turquoise-color);
+    font-size: 1.25rem;
+  }
+}

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className={styles["footer"]}>
-      <img src={AgroRiskLogoTwo} alt="logo" />
+      <img src={AgroRiskLogoTwo} alt="logo" className={styles["footer-logo"]} />
       <div className={styles["footer-grid"]}>
         {FOOTER_LINKS.map((link) => {
           return (

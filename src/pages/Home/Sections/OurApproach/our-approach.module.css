@@ -5,6 +5,8 @@
   justify-content: flex-start;
   align-items: center;
   padding: 0 6.5rem 7.1875rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .our-approach-section-content {
@@ -19,6 +21,7 @@
   justify-content: flex-start;
   align-items: flex-end;
   gap: 2.0625rem;
+  z-index: 20;
 }
 
 .our-approach-section-content-circle-one {
@@ -84,4 +87,60 @@
   color: var(--primary-turquoise-color);
   width: 13.0625rem;
   margin-right: 13.1875rem;
+}
+
+.circle1,
+.circle2 {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  .our-approach-section {
+    padding: 0;
+    background-color: var(--primary-turquoise-color);
+  }
+  .our-approach-section-content-circle-one {
+    display: none;
+  }
+  .our-approach-section-content-circle-two {
+    display: none;
+  }
+  .our-approach-section-content {
+    padding: 5.625rem 0;
+    max-width: 287px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+  .our-approach-section-content-heading {
+    gap: 50px;
+  }
+  .our-approach-section-content-heading-content {
+    gap: 50px;
+  }
+  .our-approach-section-content-heading-content-subtitle {
+    gap: 1rem;
+  }
+  .our-approach-section-content-heading-preview {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .circle1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  .circle2 {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    pointer-events: none;
+  }
+  .our-approach-section-content-heading-content-subtitle-item {
+    color: white;
+    opacity: 0.5;
+  }
 }

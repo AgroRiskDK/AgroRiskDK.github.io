@@ -57,3 +57,26 @@
   width: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 430px) {
+  .philosophy-section {
+    padding: 0;
+  }
+  .philosophy-section-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .philosophy-section-grid-img {
+    border-radius: 0;
+    height: 371px;
+    object-fit: cover;
+  }
+  .philosophy-section-grid-details {
+    padding: 92px 73px 60px 73px;
+  }
+  .philosophy-section-grid-details-content-item {
+    color: black;
+    opacity: 0.5;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

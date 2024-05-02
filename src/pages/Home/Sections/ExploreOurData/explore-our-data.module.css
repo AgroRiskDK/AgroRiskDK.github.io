@@ -93,3 +93,9 @@
   box-shadow: none;
   align-self: flex-start;
 }
+
+@media (max-width: 430px) {
+  .explore-our-data-section {
+    display: none;
+  }
+}
