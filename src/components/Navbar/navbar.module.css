@@ -41,3 +41,32 @@
   background-color: var(--primary-blue-color);
   padding: 1.5rem;
 }
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-actions {
+    display: none;
+  }
+  .nav-logo {
+    width: 169px;
+    height: 25px;
+  }
+  .mobile-provider {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 55px 0;
+  }
+  .menu-icon {
+    background-color: transparent;
+    display: block;
+  }
+}

@@ -12,6 +12,26 @@ type NavbarProps = {
   whiteLogo?: boolean;
 };
 
+const MenuIcon = () => {
+  return (
+    <svg
+      width="23"
+      height="14"
+      viewBox="0 0 23 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.5 1H21.5M1.5 7H21.5M1.5 13H21.5"
+        stroke="white"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
 const Navbar: FC<NavbarProps> = ({ whiteLogo }) => {
   const [isTalkToUsPage, setIsTalkToUsPage] = useState(false);
   // const [isInsightPage, setIsInsightPage] = useState(false);
@@ -30,8 +50,15 @@ const Navbar: FC<NavbarProps> = ({ whiteLogo }) => {
         // [styles["navbar-insight"]]: isInsightPage,
       })}
     >
-      <Link to="/">
-        <img src={!whiteLogo ? AgroRiskLogoTwo : AgroRiskLogoOne} alt="logo" />
+      <Link to="/" className={styles["mobile-provider"]}>
+        <img
+          src={!whiteLogo ? AgroRiskLogoTwo : AgroRiskLogoOne}
+          alt="logo"
+          className={styles["nav-logo"]}
+        />
+        <button className={styles["menu-icon"]}>
+          <MenuIcon />
+        </button>
       </Link>
       <div className={styles["navbar-links"]}>
         {NAVBAR_LINKS.map((link) => {
