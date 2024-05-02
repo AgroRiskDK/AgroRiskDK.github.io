@@ -69,4 +69,28 @@
     background-color: transparent;
     display: block;
   }
+  .mobile-menu-container {
+    height: 100dvh;
+    max-width: 320px;
+    width: 100%;
+    background-color: #178cae;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .mobile-navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .mobile-navbar-items {
+    color: white;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+  }
 }

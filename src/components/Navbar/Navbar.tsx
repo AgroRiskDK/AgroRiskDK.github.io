@@ -35,7 +35,7 @@ const MenuIcon = () => {
 const Navbar: FC<NavbarProps> = ({ whiteLogo }) => {
   const [isTalkToUsPage, setIsTalkToUsPage] = useState(false);
   // const [isInsightPage, setIsInsightPage] = useState(false);
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -56,7 +56,10 @@ const Navbar: FC<NavbarProps> = ({ whiteLogo }) => {
           alt="logo"
           className={styles["nav-logo"]}
         />
-        <button className={styles["menu-icon"]}>
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className={styles["menu-icon"]}
+        >
           <MenuIcon />
         </button>
       </Link>
@@ -88,6 +91,29 @@ const Navbar: FC<NavbarProps> = ({ whiteLogo }) => {
           target="_blank"
           title="Log In"
         />
+      </div>
+      <div
+        className={styles["mobile-menu-container"]}
+        style={{ display: isMobileMenuOpen ? "block" : "none" }}
+      >
+        <div className={styles["mobile-navbar"]}>
+          {NAVBAR_LINKS.map((link) => {
+            return (
+              <Link
+                className={styles["mobile-navbar-items"]}
+                key={link.id}
+                to={link.to}
+              >
+                {link.title}
+              </Link>
+            );
+          })}
+          <ButtonLink
+            to="/talk-to-us"
+            title="Book Demo"
+            className={styles["navbar-actions-book-demo-link"]}
+          />
+        </div>
       </div>
     </div>
   );
