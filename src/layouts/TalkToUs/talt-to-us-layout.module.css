@@ -8,3 +8,9 @@
   align-items: flex-start;
   padding: 2.9375rem 6.5rem 0;
 }
+
+@media (max-width: 430px) {
+  .talk-to-us-layout {
+    padding: 0;
+  }
+}

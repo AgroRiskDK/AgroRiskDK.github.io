@@ -19,7 +19,7 @@ const TalkToUsPage = () => {
   return (
     <>
       <SignUpSection onClick={handleSubmit} isSubmitted={isSubmitted} />
-      {!isSubmitted && <ContactsSection />}
+      {/* {!isSubmitted && <ContactsSection />} */}
     </>
   );
 };
