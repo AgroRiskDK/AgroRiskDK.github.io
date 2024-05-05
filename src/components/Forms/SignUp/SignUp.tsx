@@ -161,12 +161,14 @@ const SignUpForm: FC<SignUpFormProps> = ({ onClick }) => {
             </label>
           </div>
         </div>
-        <button
-          type="submit"
-          className={styles["sign-up-container-form-submit-btn"]}
-        >
-          Submit the form
-        </button>
+        <div className={styles["sign-up-container-form-submit-btn-container"]}>
+          <button
+            type="submit"
+            className={styles["sign-up-container-form-submit-btn"]}
+          >
+            Submit the form
+          </button>
+        </div>
         <div className={styles["sign-up-container-form-description"]}>
           <span className={styles["sign-up-container-form-description-title"]}>
             With{" "}
