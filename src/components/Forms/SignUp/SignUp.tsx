@@ -2,6 +2,7 @@ import { ChangeEvent, FC, FormEvent, useState } from "react";
 import styles from "./sign-up.module.css";
 import BaseInput from "@/components/Inputs/BaseInput/BaseInput";
 import jsonp from "jsonp";
+import classNames from "classnames";
 
 type SignUpFormProps = {
   onClick: () => void;
@@ -95,7 +96,12 @@ const SignUpForm: FC<SignUpFormProps> = ({ onClick }) => {
               className={styles["sign-up-container-form-input"]}
             />
           </label>
-          <label className={styles["sign-up-container-form-label"]}>
+          <label
+            className={classNames(
+              styles["sign-up-container-form-label"],
+              styles["sign-up-container-form-label-phone"]
+            )}
+          >
             Phone number *
             <BaseInput
               name="phone"
@@ -155,12 +161,14 @@ const SignUpForm: FC<SignUpFormProps> = ({ onClick }) => {
             </label>
           </div>
         </div>
-        <button
-          type="submit"
-          className={styles["sign-up-container-form-submit-btn"]}
-        >
-          Submit the form
-        </button>
+        <div className={styles["sign-up-container-form-submit-btn-container"]}>
+          <button
+            type="submit"
+            className={styles["sign-up-container-form-submit-btn"]}
+          >
+            Submit the form
+          </button>
+        </div>
         <div className={styles["sign-up-container-form-description"]}>
           <span className={styles["sign-up-container-form-description-title"]}>
             With{" "}
@@ -193,6 +201,35 @@ const SignUpForm: FC<SignUpFormProps> = ({ onClick }) => {
           </ul>
         </div>
       </form>
+      <div className={styles["sign-up-container-form-description2"]}>
+        <span className={styles["sign-up-container-form-description-title"]}>
+          With{" "}
+          <span
+            className={styles["sign-up-container-form-description-title-bold"]}
+          >
+            Agro Risk
+          </span>{" "}
+          you can:
+        </span>
+        <ul className={styles["sign-up-container-form-description-list"]}>
+          <li
+            className={styles["sign-up-container-form-description-list-item"]}
+          >
+            Gain detailed insights into financial climate risk.
+          </li>
+          <li
+            className={styles["sign-up-container-form-description-list-item"]}
+          >
+            Make informed credit decisions and improve customer dialogues.
+          </li>
+          <li
+            className={styles["sign-up-container-form-description-list-item"]}
+          >
+            Aggregate risk across your portfolio for risk management and
+            reporting.
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

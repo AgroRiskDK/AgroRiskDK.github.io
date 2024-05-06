@@ -106,3 +106,26 @@
   font-size: 2.5rem;
   color: var(--primary-black-color);
 }
+
+@media (max-width: 430px) {
+  .sign-up-section {
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+  .sign-up-section-heading {
+    padding: 34px 55px 34px 55px;
+  }
+  .sign-up-section-heading-content-title {
+    text-align: center;
+  }
+  .sign-up-section-heading-content {
+    gap: 30px;
+  }
+  .sign-up-section-submitted-content-wrapper-heading-title {
+    text-align: center;
+  }
+  .sign-up-section-submitted-content-img {
+    display: none;
+  }
+}

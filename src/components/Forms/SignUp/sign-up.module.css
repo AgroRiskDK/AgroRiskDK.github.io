@@ -171,3 +171,80 @@
 .sign-up-container-form-description-list-item::marker {
   color: var(--primary-white-color);
 }
+.sign-up-container-form-description2 {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  .sign-up-container-form-description {
+    display: none;
+  }
+  .sign-up-container-form {
+    padding: 0 18px 0 18px;
+    margin: 0;
+    background-color: transparent;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .sign-up-container-form-required {
+    padding: 42px 38px 34px 38px;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .sign-up-container-form-description2 {
+    display: block;
+    margin-top: -20px;
+  }
+  .sign-up-container-form-input {
+    width: 100%;
+    margin-top: 0;
+  }
+  .sign-up-container-form-label {
+    width: 100%;
+    gap: 9px;
+  }
+  .sign-up-container-form-label-phone {
+    margin-top: 33px;
+  }
+  .sign-up-container-form-label #signup-phone {
+    padding: 200px;
+  }
+  .sign-up-container-form-textarea {
+    width: 100%;
+  }
+  .sign-up-container-form-subscribe {
+    width: 100%;
+    padding: 0 38px;
+    background-color: white;
+  }
+  .sign-up-container-form-submit-btn-container {
+    padding: 21px 38px 34px 38px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+  }
+  .sign-up-container-form-submit-btn {
+    font-weight: 400;
+    width: 175px;
+    height: 62px;
+    border-radius: 99999px;
+    font-size: 17px;
+  }
+  .sign-up-container-form-description2 {
+    background-color: var(--primary-turquoise-color);
+    padding: 90px 0 90px 0;
+  }
+  .sign-up-container-form-description-title {
+    text-align: center;
+    padding-left: 38px;
+  }
+  .sign-up-container-form-description-list {
+    padding: 0 55px;
+    margin-top: 38px;
+  }
+}
