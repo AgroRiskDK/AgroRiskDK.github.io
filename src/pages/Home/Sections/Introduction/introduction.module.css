@@ -88,3 +88,9 @@
     pointer-events: none;
   }
 }
+
+@media screen and (min-width: 120rem) {
+  .introduction-section {
+    background-position: center center;
+  }
+}
