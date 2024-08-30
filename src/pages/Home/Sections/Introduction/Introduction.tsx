@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar/Navbar";
 import styles from "./introduction.module.css";
-import ButtonLink from "@/components/Buttons/ButtonLink/ButtonLink";
 import Background from "@/assets/imgs/bg.jpeg";
 
 const IntroductionSection = () => {
