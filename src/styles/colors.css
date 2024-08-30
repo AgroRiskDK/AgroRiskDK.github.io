@@ -11,6 +11,7 @@
   --secondary-grey-color: #ececec;
   --secondary-blue-color: #467886;
 
+  --black-opacity-80-color: rgba(0, 0, 0, 0.8);
   --black-opacity-50-color: rgba(0, 0, 0, 0.5);
   --black-opacity-10-color: rgba(0, 0, 0, 0.1);
   --black-opacity-25-color: rgba(0, 0, 0, 0.25);

@@ -82,11 +82,6 @@ const Navbar: FC<NavbarProps> = ({ whiteLogo }) => {
       </div>
       <div className={styles["navbar-actions"]}>
         <ButtonLink
-          to="/talk-to-us"
-          title="Book Demo"
-          className={styles["navbar-actions-book-demo-link"]}
-        />
-        <ButtonLink
           to="https://app.agrorisk.io"
           target="_blank"
           title="Log In"
@@ -127,11 +122,6 @@ const Navbar: FC<NavbarProps> = ({ whiteLogo }) => {
               </Link>
             );
           })}
-          <ButtonLink
-            to="/talk-to-us"
-            title="Book Demo"
-            className={styles["navbar-actions-book-demo-link"]}
-          />
         </div>
       </div>
     </div>

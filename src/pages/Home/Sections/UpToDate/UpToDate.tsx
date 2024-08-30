@@ -1,57 +1,51 @@
 import styles from "./up-to-date.module.css";
-import BaseInput from "@/components/Inputs/BaseInput/BaseInput";
-import { useState } from "react";
-import jsonp from "jsonp";
-import SubmittingModal from "@/components/Modals/Submitting/SubmittingModal";
+import React from "react";
+import {EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/outline";
+
 
 const UpToDateSection = () => {
-  const [email, setEmail] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
 
-  const handleSubscribe = () => {
-    const mailchimpBaseUrl = import.meta.env.VITE_MAILCHIMP_BASE_URL;
-    const mailchimpApiKey = import.meta.env.VITE_MAILCHIMP_API_KEY;
-    const mailchimpFormId = import.meta.env.VITE_MAILCHIMP_FORM_ID;
-    const mailchimpId = import.meta.env.VITE_MAILCHIMP_ID;
 
-    const url = `${mailchimpBaseUrl}?u=${mailchimpApiKey}&amp;id=${mailchimpId}&amp;f_id=${mailchimpFormId}`;
-
-    jsonp(`${url}&EMAIL=${email}`, { param: "c" }, (_, data) => {
-      if (data && Object.keys(data).length) {
-        setEmail("");
-        setIsOpen(true);
-      }
-    });
-  };
-
-  return (
-    <div className={styles["up-to-date-section"]}>
-      <div className={styles["up-to-date-section-wrapper"]}>
-        <div className={styles["up-to-date-section-content"]}>
+    return (
+        <div className={styles["up-to-date-section"]}>
+            <div className={styles["up-to-date-section-wrapper"]}>
+                <div className={styles["up-to-date-section-content"]}>
           <span className={styles["up-to-date-section-content-title"]}>
-            Stay Informed
+            Contact us
           </span>
-          <span className={styles["up-to-date-section-content-subtitle"]}>
-            Sign up for our newsletter to receive news, product updates and
-            analyses from AgroRisk.
-          </span>
-          <BaseInput
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your email here..."
-            name="email"
-          />
+                    <p className={styles["up-to-date-section-content-subtitle"]}>
+                        Get it touch with us for more information about our climate risk platform
+                    </p>
+                    <dl style={{display: 'flex', flexDirection: "row", gap: "24px"}}>
+                        <div style={{display: 'flex', flexDirection: "row", alignItems: "center", gap: "4px"}}>
+                            <PhoneIcon aria-hidden="true" style={{height: "16px", width: "16px",}}/>
+                            <dd>
+                                <a href="tel:+45 23 66 44 42" style={{
+                                    fontWeight: "400",
+                                    fontSize: "1.0625rem",
+                                    color: "var(--black-opacity-80-color)"
+                                }}>
+                                    +45 23 66 44 42
+                                </a>
+                            </dd>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: "row", alignItems: "center", gap: "4px"}}>
+                            <EnvelopeIcon aria-hidden="true" style={{height: "20px", width: "20px"}}/>
+                            <dd>
+                                <a href="mailto:theodor@agrorisk.io" style={{
+                                    fontWeight: "400",
+                                    fontSize: "1.0625rem",
+                                    color: "var(--black-opacity-80-color)"
+                                }}>
+                                    theodor@agrorisk.io
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
         </div>
-        <button
-          className={styles["up-to-date-section-subscribe-btn"]}
-          onClick={handleSubscribe}
-        >
-          Subscribe
-        </button>
-      </div>
-      <SubmittingModal open={isOpen} onClick={() => setIsOpen(false)} />
-    </div>
-  );
+    );
 };
 
 export default UpToDateSection;
