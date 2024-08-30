@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import ContactsSection from "./Sections/Contacts/Contacts";
 import SignUpSection from "./Sections/SignUp/SignUp";
 import { useEffect, useState } from "react";
 
