@@ -21,11 +21,6 @@ const IntroductionSection = () => {
             Actionable risk insights for financial companies
           </span>
         </div>
-        <ButtonLink
-          to="/talk-to-us"
-          title="Ask for demonstration"
-          className={styles["introduction-section-demonstration-link"]}
-        />
       </div>
       <img src={Background} alt="" className={styles["bg-image"]} />
     </div>
