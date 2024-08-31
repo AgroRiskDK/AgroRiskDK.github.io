@@ -1,4 +1,3 @@
-import ButtonLink from "@/components/Buttons/ButtonLink/ButtonLink";
 import styles from "./map-based-anatytics.module.css";
 
 import mapImgOne from "@/assets/imgs/map-1.svg";
@@ -62,15 +61,6 @@ const MapBasedAnalyticsSection = () => {
               </span>
             </div>
           </div>
-          <ButtonLink
-            to="/talk-to-us"
-            title="Book demonstration"
-            className={
-              styles[
-                "map-based-analytics-section-grid-details-book-demonstartion-link"
-              ]
-            }
-          />
         </div>
       </div>
     </div>
