@@ -18,8 +18,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 400px;
   padding: 5.4375rem 0;
-  border: 0.0625rem solid var(--border-gray-color);
 }
 
 .map-based-analytics-section-grid-details {
@@ -78,6 +78,7 @@
   }
   .map-based-analytics-section-grid-map {
     position: relative;
+    width: 100%;
     padding: 34px 0 40px 0;
   }
   .map-based-analytics-section-grid-map img {

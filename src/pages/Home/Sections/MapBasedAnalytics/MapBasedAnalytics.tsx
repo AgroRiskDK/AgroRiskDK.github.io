@@ -1,6 +1,6 @@
 import styles from "./map-based-anatytics.module.css";
 
-import mapImgOne from "@/assets/imgs/map-1.svg";
+import mapImgOne from "@/assets/imgs/map-1-new2.png";
 
 const MapBasedAnalyticsSection = () => {
   return (
@@ -10,7 +10,7 @@ const MapBasedAnalyticsSection = () => {
     >
       <div className={styles["map-based-analytics-section-grid"]}>
         <div className={styles["map-based-analytics-section-grid-map"]}>
-          <img src={mapImgOne} alt="map-one" />
+          <img src={mapImgOne} width={350} alt="map-one" />
         </div>
         <div className={styles["map-based-analytics-section-grid-details"]}>
           <div
@@ -39,9 +39,8 @@ const MapBasedAnalyticsSection = () => {
                   ]
                 }
               >
-                AgroRisk offers advanced analytics and data-driven insights to
-                help financial institutions and farmers make informed decisions
-                and transition strategies.
+                AgroRisk offers advanced analytics and data-driven insights to help financial
+institutions and farmers make informed decisions and transition strategies.
               </span>
               <span
                 className={
@@ -50,14 +49,12 @@ const MapBasedAnalyticsSection = () => {
                   ]
                 }
               >
-                By leveraging AgroRisk's innovative technology, financial
-                companies and farmers can better understand the impact of
-                climate risks on agricultural operations and mitigate potential
-                financial losses. This powerful tool enables banks and insurance
-                providers to enhance their risk management strategies and tailor
-                their financial products to the unique needs of agricultural
-                businesses. AgroRisk plays a vital role in fostering
-                sustainability and resilience within the agricultural sector.
+                By leveraging AgroRisk's innovative technology, financial companies and farmers can
+better understand the impact of climate risks on agricultural operations and mitigate
+potential financial losses. This powerful tool enables banks and insurance providers
+to enhance their risk management strategies and tailor their financial products to the
+unique needs of agricultural businesses. AgroRisk plays a vital role in fostering
+sustainability and resilience within the agricultural sector.
               </span>
             </div>
           </div>
