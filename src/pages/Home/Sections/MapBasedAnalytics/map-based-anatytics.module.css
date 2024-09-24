@@ -78,11 +78,10 @@
   }
   .map-based-analytics-section-grid-map {
     position: relative;
-    width: 100%;
+    width: 200px;
     padding: 34px 0 40px 0;
   }
   .map-based-analytics-section-grid-map img {
-    width: 284px;
     height: 284px;
   }
   .map-based-analytics-section-grid-details-book-demonstartion-link {

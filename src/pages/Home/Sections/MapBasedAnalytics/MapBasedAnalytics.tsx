@@ -1,6 +1,6 @@
 import styles from "./map-based-anatytics.module.css";
 
-import mapImgOne from "@/assets/imgs/map-1-new2.png";
+import mapImgOne from "@/assets/imgs/map-1-new3.png";
 
 const MapBasedAnalyticsSection = () => {
   return (
