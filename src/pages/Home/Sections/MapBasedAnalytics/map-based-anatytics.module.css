@@ -68,7 +68,7 @@
 
 @media (max-width: 430px) {
   .map-based-analytics-section {
-    padding: 90px 73px 100px 73px;
+    padding: 20px;
     position: relative;
   }
   .map-based-analytics-section-grid {

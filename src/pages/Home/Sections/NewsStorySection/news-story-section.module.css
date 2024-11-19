@@ -1,0 +1,101 @@
+.news-story-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.news-story-section-grid {
+  display: grid;
+  grid-template-columns: 20.875rem 26.3125rem;
+  column-gap: 10.1875rem;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  background-color: #F9F9F9;
+  border-radius: 15px;
+  padding: 50px;
+}
+
+.news-story-section-grid-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding: 5.4375rem 0;
+}
+
+.news-story-section-grid-image img {
+  border-radius: 0.625rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.news-story-section-grid-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2.0625rem;
+}
+
+.news-story-section-grid-details-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.125rem;
+}
+
+.news-story-section-grid-details-heading-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--primary-black-color);
+}
+
+.news-story-section-grid-details-heading-subtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 23.9375rem;
+}
+
+.news-story-section-grid-details-heading-subtitle-item {
+  font-weight: 400;
+  font-size: 1.0625rem;
+  color: var(--black-opacity-50-color);
+  text-align: left;
+}
+
+.news-story-section-news-link {
+  font-weight: 400;
+  font-size: 1.0625rem;
+  color: var(--black-opacity-50-color);
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .news-story-section-grid {
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .news-story-section {
+    padding: 20px;
+    position: relative;
+  }
+  .news-story-section-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .news-story-section-grid-image {
+    position: relative;
+    width: 200px;
+    padding: 34px 0 40px 0;
+  }
+  .news-story-section-grid-image img {
+    width: 300px;
+  }
+}

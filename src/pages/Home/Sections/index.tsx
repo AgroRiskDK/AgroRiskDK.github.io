@@ -1,4 +1,5 @@
 import IntroductionSection from "./Introduction/Introduction";
+import NewsStorySection from "./NewsStorySection/NewsStorySection";
 import MapBasedAnalyticsSection from "./MapBasedAnalytics/MapBasedAnalytics";
 import PhilosophySection from "./Philosophy/Philosophy";
 import UpToDateSection from "./UpToDate/UpToDate";
@@ -9,6 +10,7 @@ import ExploreOurDataSection from "./ExploreOurData/ExploreOurData";
 
 export {
   IntroductionSection,
+  NewsStorySection,
   MapBasedAnalyticsSection,
   PhilosophySection,
   UpToDateSection,

@@ -1,6 +1,7 @@
 import {
   IntroductionSection,
   PhilosophySection,
+  NewsStorySection,
   MapBasedAnalyticsSection,
   ExploreOurDataSection,
   DepthAndTransparencySection,
@@ -14,6 +15,7 @@ const HomePage = () => {
     <>
       <IntroductionSection />
       <PhilosophySection />
+      <NewsStorySection />
       <MapBasedAnalyticsSection />
       <ExploreOurDataSection />
       <DepthAndTransparencySection />
