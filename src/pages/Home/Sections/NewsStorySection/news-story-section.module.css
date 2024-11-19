@@ -80,6 +80,15 @@
   }
 }
 
+@media (max-width: 800px) {
+  .news-story-section-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+}
+
 @media (max-width: 430px) {
   .news-story-section {
     padding: 20px;
