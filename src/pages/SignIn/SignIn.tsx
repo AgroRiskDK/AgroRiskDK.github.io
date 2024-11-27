@@ -14,7 +14,7 @@ export default function SignInPage() {
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
+    
     fetchAuthToken({password, username: email}).then((data) => {
       if (data) {
         fetchUserInfo({access_token: data.access_token}).then((data) => {

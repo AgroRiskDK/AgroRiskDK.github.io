@@ -3,10 +3,7 @@ export const fetchLogoutUser = async () => {
 
   try {
     const response = await fetch(url, {
-      method: "GET",
-      headers: {
-        'Authorization': `Bearer ${sessionStorage.getItem('access_token')}`,
-      },
+       method: "GET",
     });
 
     if (!response.ok) {

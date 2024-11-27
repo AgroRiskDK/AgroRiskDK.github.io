@@ -6,12 +6,10 @@ export default function ProfilePage() {
   const {user, setUser} = useAuthContext();
   const navigate = useNavigate()
   const logoutUser = () => {
-    fetchLogoutUser().then((success) => {
-      if (success) {
-        sessionStorage.removeItem('access_token');
-        setUser(null);
-        navigate('/');
-      }
+    fetchLogoutUser().then(() => {
+      sessionStorage.removeItem('access_token');
+      setUser(null);
+      navigate('/');
     });
   }
 
