@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
     "@heroicons/react": "^2.1.5",
     "classnames": "^2.5.1",
     "jsonp": "^0.2.1",
