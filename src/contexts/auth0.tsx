@@ -8,10 +8,8 @@ type AuthContextType = {
   setUser: (Auth: TUser | null) => void;
 };
 
-// Create the AuthContext with default values
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Create a provider component
 export const AppAuth0Context: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<TUser | null>(null);
 
@@ -29,7 +27,6 @@ export const AppAuth0Context: React.FC<{ children: ReactNode }> = ({ children })
   );
 };
 
-// Create a custom hook to use the UserContext
 export const useAuthContext = () => {
   const context = useContext(AuthContext);
   if (!context) {

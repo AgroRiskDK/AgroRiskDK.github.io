@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import {fetchAuthToken, fetchUserInfo} from './api.ts';
 import { useAuthContext } from '@/contexts/auth0.tsx';
+import AgroRiskLogoTwo from "@/assets/imgs/logos/agrorisk-logo-2.svg";
+import logoStyles from "../../components/Footer/footer.module.css";
+import styles from "./styles.module.css";
+import BackgroundImage from "/src/assets/imgs/backgrounds/siginphoto-min.jpg";
 
 export default function SignInPage() {
   const [email, setEmail] = useState('');
@@ -17,7 +21,7 @@ export default function SignInPage() {
         fetchUserInfo({access_token: data.access_token}).then((data) => {
           if (data) {
             setUser(data);
-            navigate('/profile');
+            navigate('/#profile');
           }
         })
       }
@@ -25,73 +29,75 @@ export default function SignInPage() {
   }
 
   return (
-    <>
-      <div className="flex min-h-full flex-1">
-        <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-          <div className="mx-auto w-full max-w-sm lg:w-96">
-            <div>
-              <img alt="AgroRisk" src="/agrorisklogo.svg" className="h-8 w-auto" />
-              <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                Sign in to your account
-              </h2>
-            </div>
+    <div className={styles["insight-page"]}>
+      <div className={`${styles["left-panel"]} ${styles["left-panel--lg"]}`}>
+        <div className={styles["form-container"]}>
+          <div>
+            <img
+              src={AgroRiskLogoTwo}
+              alt="logo"
+              className={styles["logo"]}
+            />
+            <h2 className={styles["title"]}>Sign in to your account</h2>
+          </div>
 
-            <div className="mt-10">
-              <div>
-                <form onSubmit={onSubmit} method="POST" className="space-y-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                      Email address
-                    </label>
-                    <div className="mt-2">
-                      <input
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        autoComplete="email"
-                        className="block w-full rounded-md border-0 px-2 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                      Password
-                    </label>
-                    <div className="mt-2">
-                      <input
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        id="password"
-                        name="password"
-                        type="password"
-                        required
-                        autoComplete="current-password"
-                        className="block w-full rounded-md border-0 px-2 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <button
-                      type="submit"
-                      className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                      Sign in
-                    </button>
-                  </div>
-                </form>
+          <div className={styles["form"]}>
+            <form onSubmit={onSubmit} method="POST" className={styles["form"]}>
+              <div className={styles["input-group"]}>
+                <label
+                  htmlFor="email"
+                  className={styles["label"]}
+                >
+                  Email address
+                </label>
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  autoComplete="email"
+                  className={styles["input"]}
+                />
               </div>
-            </div>
+
+              <div className={styles["input-group"]}>
+                <label
+                  htmlFor="password"
+                  className={styles["label"]}
+                >
+                  Password
+                </label>
+                <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                  autoComplete="current-password"
+                  className={styles["input"]}
+                />
+              </div>
+
+              <button
+                type="submit"
+                className={styles["button"]}
+              >
+                Sign in
+              </button>
+            </form>
           </div>
         </div>
-        <div className="relative hidden w-0 flex-1 lg:block">
-          <img alt="" src="/siginphoto.jpg" className="absolute inset-0 h-full w-full object-cover" />
-        </div>
       </div>
-    </>
-  )
+      <div className={`${styles["right-panel"]}`}>
+        <img
+          alt="Background"
+          src={BackgroundImage}
+          className={styles["image"]}
+        />
+      </div>
+    </div>
+  );
 }
