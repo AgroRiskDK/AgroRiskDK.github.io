@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import {fetchAuthToken, fetchUserInfo} from './api.ts';
 import { useAuthContext } from '@/contexts/auth0.tsx';
 import AgroRiskLogoTwo from "@/assets/imgs/logos/agrorisk-logo-2.svg";
-import logoStyles from "../../components/Footer/footer.module.css";
-import styles from "./styles.module.css";
 import BackgroundImage from "/src/assets/imgs/backgrounds/siginphoto-min.jpg";
+import styles from "./styles.module.css";
 
 export default function SignInPage() {
   const [email, setEmail] = useState('');
@@ -21,7 +20,7 @@ export default function SignInPage() {
         fetchUserInfo({access_token: data.access_token}).then((data) => {
           if (data) {
             setUser(data);
-            navigate('/#profile');
+            navigate('/profile');
           }
         })
       }

@@ -52,7 +52,6 @@ export const fetchAuthToken = async ({username, password}: TRequestToken): Promi
     return data;
   } catch (error) {
     console.error('Error fetching token:', error);
-
   }
 }
 
@@ -72,10 +71,11 @@ export const fetchUserInfo = async ({access_token}: TRequestUserInfo): Promise<T
     }
 
     const data = await response.json();
-    console.log('User Info:', data);
+    sessionStorage.setItem('access_token', access_token);
 
     return data;
   } catch (error) {
     console.error('Error fetching user info:', error);
+    sessionStorage.removeItem('access_token');
   }
 }
