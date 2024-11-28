@@ -17,7 +17,7 @@ export default function SignInPage() {
     
     fetchAuthToken({password, username: email}).then((data) => {
       if (data) {
-        fetchUserInfo({access_token: data.access_token}).then((data) => {
+        fetchUserInfo({access_token: data.access_token, email}).then((data) => {
           if (data) {
             setUser(data);
             navigate('/profile');
