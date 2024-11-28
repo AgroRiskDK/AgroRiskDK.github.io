@@ -7,7 +7,7 @@ export const fetchLogoutUser = async ({userId}: {userId: string}) => {
   try {
     const response = await fetch(url, {
        method: "GET",
-       redirect: 'manual',
+       mode: 'no-cors',
        headers: {
          "Authorization": `Bearer ${access_token}`
        },
