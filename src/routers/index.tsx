@@ -4,9 +4,9 @@ import InsightPage from "@/pages/Insignt/Insight";
 import SignInPage from "@/pages/SignIn/SignIn";
 import ProfilePage from "@/pages/Profile/Profile";
 import TalkToUsPage from "@/pages/TalkToUs/TalkToUs";
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
