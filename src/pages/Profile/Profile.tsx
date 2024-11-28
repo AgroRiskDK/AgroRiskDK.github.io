@@ -4,17 +4,18 @@ import { useNavigate } from 'react-router-dom';
 
 export default function ProfilePage() {
   const {user, setUser} = useAuthContext();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  if (!user) {
+      return <div>User doesn't exist</div>
+  }
+
   const logoutUser = () => {
-    fetchLogoutUser().then(() => {
+    fetchLogoutUser({userId: user.user_id}).then(() => {
       sessionStorage.removeItem('access_token');
       setUser(null);
       navigate('/');
     });
-  }
-
-  if (!user) {
-      return <div>User doesn't exist</div>
   }
 
   return (
