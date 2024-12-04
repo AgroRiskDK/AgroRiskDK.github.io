@@ -82,7 +82,7 @@ const Navbar: FC<NavbarProps> = ({ whiteLogo }) => {
       </div>
       <div className={styles["navbar-actions"]}>
         <ButtonLink
-          to="https://app.agrorisk.io"
+          to="https://app.agrorisk.io/api/auth/login"
           target="_blank"
           title="Log In"
         />
