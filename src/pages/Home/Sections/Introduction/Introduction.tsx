@@ -12,7 +12,7 @@ const IntroductionSection = () => {
             className={styles["introduction-section-content-heading-title"]}
           >
             Climate Risk Platform <br className={styles["breaker"]} />
-            for Agriculture
+            for Agriculture.
           </span>
           <span
             className={styles["introduction-section-content-heading-subtitle"]}
